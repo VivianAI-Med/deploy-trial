@@ -1,0 +1,12 @@
+# Exported from Render on 2025-09-28T19:45:19Z
+version: "1"
+services:
+- type: web
+  name: deploy-trial
+  runtime: docker
+  repo: https://github.com/VivianAI-Med/deploy-trial
+  plan: free
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
